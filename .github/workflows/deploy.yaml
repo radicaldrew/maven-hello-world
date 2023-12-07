@@ -57,7 +57,9 @@ jobs:
           name: jar-artifact
           path: myapp/target/
     - name: List files
-      run: ls -lah    
+      run: ls -lah    myapp/
+    - name: List files
+      run: ls -lah    myapp/target/
     - name: Setup Docker buildx
       uses: docker/setup-buildx-action@v2
      
