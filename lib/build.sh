@@ -4,6 +4,7 @@ if [ -d "$DIR" ]
 then
 	if [ "$(ls -A $DIR)" ]; then
       cp -R  /target/myapp /usr/src/
+      rm -rf /target/myapp/target/
       mvn -f /usr/src/myapp/pom.xml clean package
       JAR_FILE=/usr/src/myapp/target/*.jar
       echo $JAR_FILE
