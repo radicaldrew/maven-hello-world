@@ -16,10 +16,6 @@ jobs:
     steps:
     - name: Checkout Latest Commit
       uses: actions/checkout@v2
-
-    - name: List files
-      run: ls -lah
-
     - name: Bump Version
       id: bump
       uses: radicaldrew/maven-version-bump-action@master
