@@ -71,7 +71,7 @@ jobs:
       name: Build & push Docker image
       with:
         image: ${{ env.IMAGE_NAME }}
-        tags: ${{job.build.outputs.version}}, latest
+        tags: ${{needs.build.outputs.version}}, latest
         registry: ${{ env.REGISTRY }}
         dockerfile: Dockerfile.ci
         username: ${{ secrets.DOCKER_USERNAME }}
