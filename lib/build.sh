@@ -8,7 +8,7 @@ then
       JAR_FILE=/usr/src/myapp/target/*.jar
       echo $JAR_FILE
       mkdir /target/myapp/target
-      cp $JAR_FILE /target/myapp/target/app.jar
+      cp $JAR_FILE /target/myapp/target/
 	else
      echo "target volume empty"
 	fi

@@ -1,3 +1,5 @@
 FROM openjdk:11-jre-slim
-COPY myapp/target/app.jar /usr/app/app.jar
+COPY myapp/target/ /usr/app/target/
+ARG JAR_FILE=/usr/app/target/*.jar
+RUN cp ${JAR_FILE} /usr/app/app.jar
 ENTRYPOINT ["java","-jar", "/usr/app/app.jar"]
