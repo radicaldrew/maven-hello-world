@@ -38,12 +38,6 @@ jobs:
     - name: Build a package
       run: mvn -B package --file myapp/pom.xml
 
-    - name: Create Directory and Copy
-      run: ls -lah  
-
-    - name: Create Directory and Copy
-      run: mkdir staging && cp target/*.jar staging
-
     - uses: actions/upload-artifact@v3
       with:
         name: jar-artifact
