@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Bump Version
       id: bump
-      uses: radicaldrew/maven-version-bump-action@master
+      uses: radicaldrew/maven-version-bump@master
       with:
         github-token: ${{ secrets.github_token }}
         pom-path: "myapp"
