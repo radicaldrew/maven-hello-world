@@ -45,7 +45,7 @@ jobs:
         retention-days: 1
 
     - name: Print Version
-      run: "echo 'New Version: ${{steps.bump.outputs.version}}'"
+      run: "echo ' sNew Version: ${{steps.bump.outputs.version}}'"
 
   deploy:
     runs-on: ubuntu-latest
